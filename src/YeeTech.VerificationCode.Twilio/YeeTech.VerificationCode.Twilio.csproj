@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Twilio" Version="5.9.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YeeTech.VerificationCode\YeeTech.VerificationCode.csproj" />
+  </ItemGroup>
+
+</Project>
