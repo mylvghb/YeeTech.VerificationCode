@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YeeTech.VerificationCode", "src\YeeTech.VerificationCode\YeeTech.VerificationCode.csproj", "{F637076B-8586-4A52-AB3A-17EDC2BBA529}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YeeTech.VerificationCode", "src\YeeTech.VerificationCode\YeeTech.VerificationCode.csproj", "{F637076B-8586-4A52-AB3A-17EDC2BBA529}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YeeTech.VerificationCode.Image", "src\YeeTech.VerificationCode.Image\YeeTech.VerificationCode.Image.csproj", "{8ED7CDE2-E28F-48B8-BFBA-7038F60BBC97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YeeTech.VerificationCode.Image", "src\YeeTech.VerificationCode.Image\YeeTech.VerificationCode.Image.csproj", "{8ED7CDE2-E28F-48B8-BFBA-7038F60BBC97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YeeTech.VerificationCode.Mail", "src\YeeTech.VerificationCode.Mail\YeeTech.VerificationCode.Mail.csproj", "{6F82E451-9F4B-4D47-B46E-888CC9B024FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YeeTech.VerificationCode.Mail", "src\YeeTech.VerificationCode.Mail\YeeTech.VerificationCode.Mail.csproj", "{6F82E451-9F4B-4D47-B46E-888CC9B024FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YeeTech.VerificationCode.Twilio", "src\YeeTech.VerificationCode.Twilio\YeeTech.VerificationCode.Twilio.csproj", "{BBB54B55-156E-4C64-B7D8-5F915937AC57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YeeTech.VerificationCode.Twilio", "src\YeeTech.VerificationCode.Twilio\YeeTech.VerificationCode.Twilio.csproj", "{BBB54B55-156E-4C64-B7D8-5F915937AC57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0276FC20-B6FC-44B3-A483-E3DAC6758764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerificationCode.Tests", "tests\VerificationCode.Tests\VerificationCode.Tests.csproj", "{123F9250-53C3-4E87-9D97-F816B89EA7BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckWeb.Mvc", "tests\CheckWeb.Mvc\CheckWeb.Mvc.csproj", "{7D5A6E52-E850-46EB-AE66-2DD10E0218D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,21 @@ Global
 		{BBB54B55-156E-4C64-B7D8-5F915937AC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBB54B55-156E-4C64-B7D8-5F915937AC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBB54B55-156E-4C64-B7D8-5F915937AC57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{123F9250-53C3-4E87-9D97-F816B89EA7BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123F9250-53C3-4E87-9D97-F816B89EA7BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123F9250-53C3-4E87-9D97-F816B89EA7BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123F9250-53C3-4E87-9D97-F816B89EA7BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D5A6E52-E850-46EB-AE66-2DD10E0218D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5A6E52-E850-46EB-AE66-2DD10E0218D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5A6E52-E850-46EB-AE66-2DD10E0218D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5A6E52-E850-46EB-AE66-2DD10E0218D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{123F9250-53C3-4E87-9D97-F816B89EA7BB} = {0276FC20-B6FC-44B3-A483-E3DAC6758764}
+		{7D5A6E52-E850-46EB-AE66-2DD10E0218D1} = {0276FC20-B6FC-44B3-A483-E3DAC6758764}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ABEBA5EE-CAFF-4CA6-9194-1330535FBE9A}
