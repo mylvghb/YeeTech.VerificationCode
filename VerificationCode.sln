@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckWeb.Mvc", "tests\Check
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckWeb.AspNet", "tests\CheckWeb.AspNet\CheckWeb.AspNet.csproj", "{2C1FB546-53C6-420F-B7FB-FE820CC3FF58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckWeb.NetCore", "tests\CheckWeb.NetCore\CheckWeb.NetCore.csproj", "{7AA955B0-716D-49C7-B5A6-DF6F548027D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{2C1FB546-53C6-420F-B7FB-FE820CC3FF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C1FB546-53C6-420F-B7FB-FE820CC3FF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C1FB546-53C6-420F-B7FB-FE820CC3FF58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AA955B0-716D-49C7-B5A6-DF6F548027D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AA955B0-716D-49C7-B5A6-DF6F548027D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AA955B0-716D-49C7-B5A6-DF6F548027D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AA955B0-716D-49C7-B5A6-DF6F548027D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{123F9250-53C3-4E87-9D97-F816B89EA7BB} = {0276FC20-B6FC-44B3-A483-E3DAC6758764}
 		{7D5A6E52-E850-46EB-AE66-2DD10E0218D1} = {0276FC20-B6FC-44B3-A483-E3DAC6758764}
 		{2C1FB546-53C6-420F-B7FB-FE820CC3FF58} = {0276FC20-B6FC-44B3-A483-E3DAC6758764}
+		{7AA955B0-716D-49C7-B5A6-DF6F548027D1} = {0276FC20-B6FC-44B3-A483-E3DAC6758764}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ABEBA5EE-CAFF-4CA6-9194-1330535FBE9A}
