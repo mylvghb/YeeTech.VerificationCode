@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,9 +21,21 @@ namespace CheckWeb.NetCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-//            services.AddOptions();
-            var mailSmtp = Configuration.GetSection("MailSmtp");
-            services.Configure<MailSmtpConfiguration>(mailSmtp);
+            var server = Configuration.GetValue<string>("MailSmtp:SmtpServer");
+            var port = Configuration.GetValue<int>("MailSmtp:SmtpPort");
+            var username = Configuration.GetValue<string>("MailSmtp:SmtpUsername");
+            var password = Configuration.GetValue<string>("MailSmtp:SmtpPassword");
+            var useSsl = Configuration.GetValue<bool>("MailSmtp:UseSsl");
+
+            services.AddSingleton<IMailSmtpConfiguration>(new MailSmtpConfiguration
+            {
+                SmtpServer = server,
+                SmtpPort = port,
+                SmtpUsername = username,
+                SmtpPassword = password,
+                UseSsl = useSsl
+            });
+
             services.AddSingleton<IVerificationCode>(new GeneralVerificationCode(
                 GeneralCodeFlags.Number, 6
             ));
@@ -37,25 +45,24 @@ namespace CheckWeb.NetCore
             });
             services.AddSingleton<IMessageVerificationCodeFactory>(provider =>
             {
-               return new MailVerificationCodeProvider(
-                        Configuration.Get<MailSmtpConfiguration>(),
-                        provider.GetService<IVerificationCode>(),
-                        provider.GetService<ITemplateParser>()
-                   )
-               {
-                   From = "postmaster@wulegou.top",
-                   MessageSentHandler = (text, message) =>
-                   {
-                       // store code in session and log the message
-                   }
-               };
+                return new MailVerificationCodeProvider(
+                    provider.GetService<IMailSmtpConfiguration>(),
+                    provider.GetService<IVerificationCode>(),
+                    provider.GetService<ITemplateParser>()
+                )
+                {
+                    From = "postmaster@wulegou.top",
+                    MessageSentHandler = (text, message) =>
+                    {
+                        // store code in session and log the message
+                    }
+                };
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
@@ -71,8 +78,8 @@ namespace CheckWeb.NetCore
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    "default",
+                    "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

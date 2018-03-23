@@ -21,7 +21,7 @@ namespace CheckWeb.NetCore.Controllers
 
         public void Post(MessageRequest request)
         {
-            var a = 1;
+            _factory.Send(request.To);
         }
     }
 
