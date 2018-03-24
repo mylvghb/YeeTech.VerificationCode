@@ -31,8 +31,8 @@ YeeTech.VerificationCode is a cross-platform, fast, high performance and extendi
 
         public override void Configure(Container container)
         {
-            container.Register<IVerificationCode>(new GeneralVerificationCode());
-            container.RegisterAs<ImageVerificationCodeProvider, IImageVerificationCodeFactory>()
+            container.Register\<IVerificationCode\>(new GeneralVerificationCode());
+            container.RegisterAs\<ImageVerificationCodeProvider, IImageVerificationCodeFactory\>()
                 .InitializedBy((c, f) =>
                 {
                     f.Width = 80;
