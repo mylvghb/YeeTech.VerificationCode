@@ -13,8 +13,8 @@ YeeTech.VerificationCode is a cross-platform, fast, high performance and extendi
 
 **image verification code service**
 
-1. use servicestack:
-<pre>
+1. use servicestack(.NET Framework):
+```csharp
     public class Global : HttpApplication
     {
         protected void Application_Start(object sender, EventArgs e)
@@ -31,8 +31,8 @@ YeeTech.VerificationCode is a cross-platform, fast, high performance and extendi
 
         public override void Configure(Container container)
         {
-            container.Register\<IVerificationCode\>(new GeneralVerificationCode());
-            container.RegisterAs\<ImageVerificationCodeProvider, IImageVerificationCodeFactory\>()
+            container.Register<IVerificationCode>(new GeneralVerificationCode());
+            container.RegisterAs<ImageVerificationCodeProvider, IImageVerificationCodeFactory>()
                 .InitializedBy((c, f) =>
                 {
                     f.Width = 80;
@@ -62,4 +62,10 @@ YeeTech.VerificationCode is a cross-platform, fast, high performance and extendi
     public class GetVcodeRequest
     {
     }
-</pre>
+```
+
+2. use asp.net core(.NET Core):
+    
+```csharp
+    
+```
