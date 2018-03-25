@@ -187,4 +187,4 @@ use asp.net core(.NET Core)
     }
 ```
 
-more examples at [Tests](https://github.com/mylvghb/YeeTech.VerificationCode/tree/master/tests)
+More examples at [Tests](https://github.com/mylvghb/YeeTech.VerificationCode/tree/master/tests)
