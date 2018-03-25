@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <Authors>mylvghb</Authors>
+    <Company>YeeTech</Company>
+    <Description>send verification code pass email.</Description>
+    <Copyright>Copyright © YeeTech</Copyright>
+    <PackageLicenseUrl>https://github.com/mylvghb/YeeTech.VerificationCode/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mylvghb/YeeTech.VerificationCode</PackageProjectUrl>
+    <PackageTags>VerificationCode, Email, Mail, Message</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

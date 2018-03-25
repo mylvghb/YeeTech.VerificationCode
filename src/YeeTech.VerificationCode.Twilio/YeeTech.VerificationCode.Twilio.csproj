@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <Authors>mylvghb</Authors>
+    <Company>YeeTech</Company>
+    <Copyright>Copyright © YeeTech</Copyright>
+    <PackageLicenseUrl>https://github.com/mylvghb/YeeTech.VerificationCode/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mylvghb/YeeTech.VerificationCode</PackageProjectUrl>
+    <Description>send verification code pass SMS, voice using Twilio Gateway</Description>
+    <PackageTags>VerificationCode, SMS, Voice, Message</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
