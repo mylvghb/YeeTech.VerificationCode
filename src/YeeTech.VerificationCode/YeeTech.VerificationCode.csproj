@@ -11,6 +11,12 @@ and define drawing and sending interfaces.</Description>
     <PackageProjectUrl>https://github.com/mylvghb/YeeTech.VerificationCode</PackageProjectUrl>
     <RepositoryUrl />
     <PackageTags>VerificationCode</PackageTags>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net46|AnyCPU'">
+    <WarningLevel>2</WarningLevel>
   </PropertyGroup>
 
 </Project>
