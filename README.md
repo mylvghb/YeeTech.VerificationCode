@@ -4,10 +4,10 @@ YeeTech.VerificationCode is a cross-platform, fast, high performance and extendi
 
 ## YeeTech.VerificationCode Libraies
 
-* `YeeTech.VerificationCode`&emsp;Verification code core. it provid generate diffrence verification code, delegates and rich interfaces that draw or send verification code.
+* `YeeTech.VerificationCode`&emsp;Verification code core. it provid generate difference verification code, delegates and rich interfaces that draw or send verification code.
 * `YeeTech.VerificationCode.Image`&emsp;Dawing verification code image.
 * `YeeTech.VerificationCode.Mail`&emsp;Sending verification code message pass email.
-* `YeeTech.VerificationCode.Twilio`&emsp;Sending SMS,Voice verification code pass Twilio gateway.
+* `YeeTech.VerificationCode.Twilio`&emsp;Sending SMS, Voice verification code pass Twilio gateway.
 
 ## Live Examples
 
@@ -83,7 +83,7 @@ YeeTech.VerificationCode is a cross-platform, fast, high performance and extendi
     }
 ```
 
-**Send verificaiton code pass Email**
+**Send verification code pass Email**
 
 use asp.net core(.NET Core)
 
@@ -121,7 +121,7 @@ use asp.net core(.NET Core)
             ));
             services.AddSingleton<ITemplateParser>(new DefaultTemplateParser
             {
-                Template = "¡¾ÎáÀÖ¹º¡¿{{Code}} ÊÇÄúµÄÑéÖ¤Âë£¬·Ç±¾ÈË²Ù×÷ÇëºöÂÔ"
+                Template = "ã€å¾ä¹è´­ã€‘{{Code}} æ˜¯æ‚¨çš„éªŒè¯ç ï¼Œéæœ¬äººæ“ä½œè¯·å¿½ç•¥"
             });
             services.AddSingleton<IMessageVerificationCodeFactory>(provider =>
             {
